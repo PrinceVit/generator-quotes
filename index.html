@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src gap://ready file://* *; style-src 'self' http://* https://* 'unsafe-inline'; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+      <style>
+
+        .generate{
+            display: inline-block;
+            color: white;
+            background-color: #c8c8c8;
+            padding: 15px 10px;
+            margin-top:10px;
+            width:200px;
+            text-align: center;
+            border-radius: 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .generate:hover{
+            cursor: pointer;
+        }
+
+        .blockQuotes{
+            font-family: 'Open Sans', sans-serif;
+            border-left: 10px solid #767676;
+            background: #e8e8e8;
+            color: #333333;
+            margin-top:20px;
+            max-width: 500px;
+            padding: 20px;
+            font-weight: 100;
+            min-height:200px;
+            font-size: 16px;
+            line-height: 1.2;
+            font-size:16px;
+
+        }
+
+        .blockQuotes small{
+            color:#afafaf;
+            font-style:italic;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+
+        .blockQuotes .text{
+            padding: 20px 0px 40px 20px;
+            position: relative;
+        }
+
+        .blockQuotes .text::after{
+            content: '\201C';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color:#767676;
+            font: 6em/1.08em 'PT Sans', sans-serif;
+            font-size: 60px;
+        }
+
+        .blockQuotes .text::before{
+            content: '\201C';
+            position: absolute;
+            position: absolute;
+            top: calc(100% - 50px);
+            right: 0;
+            color:#767676;
+            font: 6em/1.08em 'PT Sans', sans-serif;
+            font-size: 60px;
+        }
+
+      </style>
+</head>
+<body>
+
+
+<span class="generate"> Losuj nowy cytat</span>
+
+
+
+
+</body>
+
+<script src="./index.js"></script>
+</html>
