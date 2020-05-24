@@ -22,10 +22,17 @@
             text-align: center;
             border-radius: 10px;
             font-family: 'Open Sans', sans-serif;
+            border:solid 2px transparent;
+            transition:all .3s ease-in-out;
+            user-select: none;
         }
 
         .generate:hover{
             cursor: pointer;
+            background-color:white;
+            border:solid 2px #c8c8c8;
+            color:#c8c8c8;
+
         }
 
         .blockQuotes{
@@ -41,15 +48,27 @@
             font-size: 16px;
             line-height: 1.2;
             font-size:16px;
+            
 
         }
 
+        .blockQuotes.hide{
+            opacity: 0;
+            transition:opacity .3s ease-in-out;
+        }
+
+        .blockQuotes.show{
+            opacity:1;
+            transition:opacity .3s ease-in-out;
+        }
+
         .blockQuotes small{
-            color:#afafaf;
+            color:#767676;
             font-style:italic;
             display: flex;
             justify-content: flex-end;
             margin-top: 20px;
+            font-weight:500;
             font-size: 12px;
         }
 

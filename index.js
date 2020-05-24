@@ -27,17 +27,35 @@ function Click(){
             let body = document.querySelector("body");
             let element = document.createElement('div');
             element.classList.add("block");
-            console.log("window.quotes",window.quotes);
 
             body.appendChild(element);
             let item = document.querySelector(".generate");
             let block = document.querySelector(".block");
            
             item.addEventListener("click", () => {
-                let random = Math.floor((Math.random() * window.quotes.length) );
-                let template = `<div class="blockQuotes"><div class="text">${window.quotes[random].quotes_text}</div><small>${window.quotes[random].movie},${window.quotes[random].year}</small></div>`;
+                if(window.quotes && window.quotes.length > 0 ){
+                    let random = Math.floor((Math.random() * window.quotes.length) );
 
-                block.innerHTML = template;
+                    let template = 
+                    `<div class="blockQuotes hide"><div class="text">
+                    ${window.quotes[random].quotes_text}</div>
+                    <small>${window.quotes[random].movie},${window.quotes[random].year}</small></div>`;
+
+
+                    block.innerHTML = template;
+                    let blockQuotes = document.querySelector(".blockQuotes");
+       
+        
+                    if(blockQuotes){
+                        if(blockQuotes.classList.contains("hide")){
+                        
+                            setTimeout(() => {
+                                blockQuotes.classList.remove("hide");
+                                blockQuotes.classList.add("show");
+                            },150);
+                        }
+                    }
+                }
             });
        } 
        Init();
